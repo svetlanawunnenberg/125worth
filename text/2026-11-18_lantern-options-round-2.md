@@ -31,6 +31,8 @@
 ## The four Round 2 lanterns
 
 ### 1. Fine Art Lamps, Style 837082
+![Fine Art Lamps 837082 spec sheet](../pages/lanterns/FineArtLamps_837082.jpg)
+
 - Customer reference drawing dated 5/09/14. Fine Art Lamps (est. 1940), (305) 821-3850.
 - **34" H x 15" W**, 13" across the flats (hexagonal).
 - Canopy 7".
@@ -39,6 +41,8 @@
 - **Not on the sheet:** finish, material, lamp count, wattage, wet/damp rating. Confirm it's still in production (drawing is from 2014).
 
 ### 2. Bexley Manor 9324-585 (The Great Outdoors / Minka Lavery)
+![Bexley Manor 9324-585 spec sheet](../pages/lanterns/BexleyManor_9324-585.jpg)
+
 - 4-light outdoor chain-hung pendant. Finish: black with gold highlights.
 - **31.75" H x 11" W x 11" L**. Weight 15.54 lb.
 - Canopy 5" diameter.
@@ -48,6 +52,8 @@
 - Damp rated, ETL listed (certificate 4009012). UPC 747396097848.
 
 ### 3. Troy Lighting Campanile F5009-FRN (Hudson Valley Lighting Group)
+![Troy Campanile F5009-FRN spec sheet](../pages/lanterns/Troy_Campanile_F5009-FRN.jpg)
+
 - Clear seeded glass globe caged in scrolling French Iron metalwork with a circle-motif band and acanthus-like leaves. Finish: French Iron.
 - **29.25" H x 16.75" diameter**. Weight 23.1 lb.
 - Canopy 6", round.
@@ -57,6 +63,8 @@
 - **Coastal suitable finish (EPM): No.**
 
 ### 4. Hinkley Windsor 1892RK, Large Hanging Lantern (Estate Series)
+![Hinkley Windsor 1892RK spec sheet](../pages/lanterns/Hinkley_Windsor_1892RK.jpg)
+
 - Cast aluminum. Finish: River Rock (also Black). Clear water glass.
 - **28.5" H x 12.5" W**. Weight 16.0 lb.
 - Canopy 5.5" diameter. Lead wire 72". Fits sloped ceilings up to 90 degrees.
@@ -82,6 +90,8 @@
 5. Hang height and chain length to clear the bottom of the new loggia beams.
 
 ## Rendering reference: Via Mizner
+
+![Via Mizner lantern reference](../pages/lanterns/reference_via_mizner.jpg)
 
 `sources/2026-11-18_lantern-options-round-2/reference_via_mizner_lantern.png` is a photo of a Palm Beach via: white stucco walls, a red tile roof, a stucco arch spanning the passage, cream scalloped awnings, red shutters, potted coleus and tropical planting, stone paving, and a **black iron lantern on a scrolled wall bracket**. Use it for mood and lantern character.
 

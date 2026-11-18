@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>125 Worth Avenue &middot; Project Search &middot; Fairfax &amp; Sammons</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#F4EFE4; --ivory-deep:#ECE4D2; --ink:#161310; --ink-soft:#3A342C;
+  --line:#C9BFA6; --brass:#8A6D3B; --white:#FFFFFF; --mark:#F1DFB0;
+}
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{ margin:0; background:var(--ivory); color:var(--ink); line-height:1.6;
+  font-family:'Inter',-apple-system,'Segoe UI',sans-serif; -webkit-font-smoothing:antialiased; }
+.serif{ font-family:'EB Garamond',Georgia,serif; }
+a{ color:inherit; }
+
+/* header */
+.top{ background:var(--white); border-bottom:1px solid var(--line); padding:14px 20px 12px; text-align:center; }
+.wordmark{ display:block; font-family:'EB Garamond',Georgia,serif; font-size:1.5rem; letter-spacing:.22em; text-transform:uppercase; font-weight:500; }
+.wm-sub{ display:block; font-size:9px; letter-spacing:.32em; text-transform:uppercase; color:var(--brass); margin-top:2px; }
+.wrap{ max-width:1080px; margin:0 auto; padding:0 20px 80px; }
+.head{ text-align:center; padding:34px 0 4px; }
+.eyebrow{ font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--brass); margin:0 0 12px; }
+h1{ font-family:'EB Garamond',Georgia,serif; font-weight:500; font-size:clamp(2rem,5.2vw,3rem); line-height:1.1; margin:0; letter-spacing:.02em; }
+.sub{ font-family:'EB Garamond',Georgia,serif; font-style:italic; color:var(--ink-soft); font-size:1.08rem; margin:8px 0 0; }
+
+/* search */
+.search{ position:sticky; top:0; z-index:5; background:var(--ivory); padding:22px 0 10px; }
+.sbox{ position:relative; max-width:760px; margin:0 auto; }
+.sbox svg{ position:absolute; left:16px; top:50%; margin-top:-10px; width:20px; height:20px; color:var(--brass); pointer-events:none; }
+.sbox input{ width:100%; font:500 1.08rem/1.3 'Inter',sans-serif; padding:17px 44px 17px 48px; border:1px solid var(--ink);
+  background:var(--white); color:var(--ink); outline:none; -webkit-appearance:none; appearance:none; border-radius:0; }
+.sbox input:focus{ box-shadow:0 0 0 3px rgba(138,109,59,.3); }
+.sbox input::placeholder{ color:#8a8276; }
+.clear{ position:absolute; right:8px; top:50%; transform:translateY(-50%); border:0; background:none; font-size:22px; color:var(--ink-soft); cursor:pointer; display:none; padding:4px 10px; }
+.chips{ max-width:760px; margin:12px auto 0; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
+.chip{ font:500 12px 'Inter',sans-serif; border:1px solid var(--line); background:var(--white); color:var(--ink-soft); padding:6px 12px; cursor:pointer; }
+.chip:hover{ border-color:var(--brass); color:var(--brass); }
+.count{ max-width:760px; margin:10px auto 0; font-size:12px; color:var(--ink-soft); text-align:center; min-height:18px; }
+
+/* section labels */
+.dlabel{ display:flex; align-items:center; gap:12px; margin:40px 0 16px; font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--brass); }
+.dlabel::after{ content:''; flex:1; height:1px; background:var(--line); }
+
+/* results */
+.results{ max-width:860px; margin:0 auto; }
+.res{ display:flex; gap:18px; background:var(--white); border:1px solid var(--line); padding:18px 20px; margin:0 0 12px; cursor:pointer; text-align:left; width:100%; font:inherit; color:inherit; }
+.res:hover{ border-color:var(--ink); }
+.res .meta{ font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--brass); margin:0 0 4px; }
+.res h3{ font-family:'EB Garamond',Georgia,serif; font-weight:600; font-size:1.3rem; line-height:1.2; margin:0 0 6px; }
+.res p{ margin:0; font-size:.92rem; color:var(--ink-soft); }
+.res .thumb{ flex:0 0 150px; }
+.res .thumb img{ width:150px; height:auto; display:block; border:1px solid var(--ivory-deep); }
+mark{ background:var(--mark); color:inherit; padding:0 1px; }
+.none{ text-align:center; font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:1.15rem; color:var(--ink-soft); padding:30px 0; }
+
+/* home: docs + slides */
+.docs{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:12px; }
+.doc{ background:var(--white); border:1px solid var(--ink); padding:22px 24px; cursor:pointer; text-align:left; font:inherit; color:inherit; transition:background .16s,color .16s; }
+.doc:hover{ background:var(--ink); color:var(--ivory); }
+.doc .t{ font-family:'EB Garamond',Georgia,serif; font-size:1.35rem; font-weight:600; line-height:1.15; display:block; }
+.doc .s{ font-size:.84rem; opacity:.75; display:block; margin-top:6px; }
+.grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; }
+.tile{ background:var(--white); border:1px solid var(--line); padding:0; cursor:pointer; text-align:left; font:inherit; color:inherit; }
+.tile:hover{ border-color:var(--ink); }
+.tile img{ width:100%; display:block; aspect-ratio:16/9; object-fit:cover; }
+.tile span{ display:block; padding:8px 10px; font-size:12px; line-height:1.3; color:var(--ink-soft); }
+.tile.tall img{ aspect-ratio:4/5; object-fit:contain; background:var(--white); }
+
+/* reader overlay */
+.reader{ position:fixed; inset:0; background:rgba(22,19,16,.55); z-index:20; display:none; overflow-y:auto; padding:30px 14px; }
+.reader.on{ display:block; }
+.panel{ max-width:860px; margin:0 auto; background:var(--ivory); border:1px solid var(--ink); padding:28px clamp(18px,4vw,44px) 40px; position:relative; }
+.close{ position:absolute; top:10px; right:12px; border:0; background:none; font-size:28px; cursor:pointer; color:var(--ink); line-height:1; }
+.panel .meta{ font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--brass); margin:0 0 10px; }
+.panel .imgs img{ width:100%; display:block; border:1px solid var(--line); margin:0 0 14px; cursor:zoom-in; background:var(--white); }
+.md h1{ font-size:clamp(1.6rem,4vw,2.2rem); margin:0 0 14px; }
+.md h2,.md h3{ font-family:'EB Garamond',Georgia,serif; font-weight:600; line-height:1.2; }
+.md h2{ font-size:1.5rem; margin:28px 0 10px; border-bottom:1px solid var(--line); padding-bottom:4px; }
+.md h3{ font-size:1.25rem; margin:22px 0 8px; }
+.md table{ border-collapse:collapse; width:100%; font-size:.88rem; margin:10px 0 18px; background:var(--white); }
+.md th,.md td{ border:1px solid var(--line); padding:7px 10px; text-align:left; vertical-align:top; }
+.md th{ background:var(--ivory-deep); font-weight:600; }
+.md code{ font-size:.85em; background:var(--ivory-deep); padding:1px 4px; }
+.md img{ max-width:100%; border:1px solid var(--line); cursor:zoom-in; background:var(--white); }
+.md li{ margin:3px 0; }
+.btnrow{ margin:22px 0 0; display:flex; gap:10px; flex-wrap:wrap; }
+.btn{ font:500 11px 'Inter',sans-serif; letter-spacing:.14em; text-transform:uppercase; border:1px solid var(--ink); background:var(--white); color:var(--ink); padding:10px 14px; cursor:pointer; text-decoration:none; }
+.btn:hover{ background:var(--ink); color:var(--ivory); }
+
+/* lightbox */
+.lb{ position:fixed; inset:0; background:rgba(10,9,8,.92); z-index:30; display:none; align-items:center; justify-content:center; padding:16px; }
+.lb.on{ display:flex; }
+.lb img{ max-width:100%; max-height:100%; background:var(--white); }
+.lb button{ position:absolute; top:10px; right:14px; border:0; background:none; color:#fff; font-size:32px; cursor:pointer; }
+
+footer{ text-align:center; font-size:11px; color:var(--ink-soft); margin-top:56px; letter-spacing:.06em; }
+@media (max-width:600px){
+  .res{ flex-direction:column-reverse; }
+  .res .thumb{ flex:none; } .res .thumb img{ width:100%; }
+}
+</style>
+</head>
+<body>
+
+<div class="top"><span class="wordmark">Fairfax &amp; Sammons</span><span class="wm-sub">Architects &middot; New York &middot; Palm Beach</span></div>
+
+<div class="wrap">
+  <div class="head">
+    <p class="eyebrow">L3 Capital &middot; Palm Beach &middot; ARCOM December 9, 2026</p>
+    <h1>125 Worth Avenue</h1>
+    <p class="sub">Search every presentation, drawing, spec sheet and email</p>
+  </div>
+
+  <div class="search">
+    <div class="sbox">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="text" enterkeyhint="search" autocomplete="off" placeholder="Try &ldquo;lantern&rdquo;, &ldquo;suite 4&rdquo;, &ldquo;footcandles&rdquo;, &ldquo;tile&rdquo;" aria-label="Search 125 Worth Avenue">
+      <button class="clear" id="clear" aria-label="Clear search">&times;</button>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="count" id="count"></div>
+  </div>
+
+  <div id="results" class="results"></div>
+
+  <div id="home">
+    <div class="dlabel">Documents</div>
+    <div class="docs" id="docs"></div>
+
+    <div class="dlabel">Lantern options &middot; Round 2</div>
+    <div class="grid" id="lanterns"></div>
+
+    <div class="dlabel">ARCOM presentation &middot; 31 slides</div>
+    <div class="grid" id="slides"></div>
+  </div>
+
+  <footer>125 Worth Avenue, Palm Beach &middot; Fairfax &amp; Sammons Architects &middot; Updated <span id="updated"></span></footer>
+</div>
+
+<div class="reader" id="reader"><div class="panel"><button class="close" id="rclose" aria-label="Close">&times;</button><div id="rbody"></div></div></div>
+<div class="lb" id="lb"><button id="lbclose" aria-label="Close">&times;</button><img id="lbimg" alt=""></div>
+
+<script src="assets/marked.min.js"></script>
+<script src="search-data.js"></script>
+<script>
+(function(){
+  var D = window.SEARCH_DATA, docs = {}, $ = function(id){ return document.getElementById(id); };
+  D.docs.forEach(function(d){ docs[d.id] = d; });
+  $('updated').textContent = D.updated || '';
+
+  var SHORT = {
+    '00_INDEX':'Master index',
+  };
+  function docLabel(id){
+    if (SHORT[id]) return SHORT[id];
+    var t = docs[id] ? docs[id].title : id;
+    return t.replace(/^125 Worth Avenue:\s*/,'');
+  }
+  function docDate(id){ var m = id.match(/^(\d{4}-\d{2}-\d{2})/); return m ? m[1] : ''; }
+  function esc(s){ return s.replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function thumb(p){ return p.indexOf('arcom-presentation/') > -1 ? p.replace('arcom-presentation/','arcom-presentation/thumbs/') : p; }
+  function fixImgs(md){ return md.replace(/\]\(\.\.\//g,'](').replace(/!\[([^\]]*)\]\(([^)]+)\)/g,'![$1]($2)'); }
+  function plain(md){
+    return md.replace(/!\[[^\]]*\]\([^)]*\)/g,'').replace(/\[([^\]]*)\]\([^)]*\)/g,'$1')
+      .replace(/[*_`#>|]/g,' ').replace(/(^|\s)-\s/g,' ').replace(/-{3,}/g,' ').replace(/\s+/g,' ').trim();
+  }
+
+  // ---------- search ----------
+  var IDX = D.chunks.map(function(c, i){
+    var body = plain(c.text);
+    var intro = docs[c.doc] && c.title === docs[c.doc].title;
+    return { i:i, c:c, w:(intro ? 0.35 : 1), title:(c.title||'').toLowerCase(), section:(c.section||'').toLowerCase(), body:body, low:body.toLowerCase() };
+  });
+  var SYN = { lamp:['lantern','fixture','pendant'], lantern:['pendant','lamp','fixture'], light:['lighting','lantern','fixture'],
+    sf:['square','sf'], sqft:['sf'], floor:['flooring'], ceiling:['beam','soffit'], beam:['ceiling'], color:['colour','paint','farrow'],
+    paint:['color','farrow'], richard:['sammons'], michael:['cabrera'], raquel:['swearingen','cx connect'] };
+
+  function terms(q){
+    return q.toLowerCase().replace(/[^a-z0-9.\-\/' ]+/g,' ').split(/\s+/).filter(function(t){ return t.length > 0; });
+  }
+  function count(hay, t){ var n = 0, i = 0; while ((i = hay.indexOf(t, i)) > -1){ n++; i += t.length; } return n; }
+  function scoreTerm(r, t){
+    var alts = [t].concat(SYN[t] || []), best = 0;
+    alts.forEach(function(a, k){
+      var w = k === 0 ? 1 : 0.6;
+      var s = (count(r.title, a) * 8 + count(r.section, a) * 3 + Math.min(count(r.low, a), 6)) * w;
+      if (s > best) best = s;
+    });
+    return best;
+  }
+  function search(q){
+    var ts = terms(q); if (!ts.length) return [];
+    var all = [], any = [];
+    IDX.forEach(function(r){
+      var total = 0, hits = 0;
+      ts.forEach(function(t){ var s = scoreTerm(r, t); if (s > 0){ hits++; total += s; } });
+      // the whole phrase appearing together is worth a lot
+      if (ts.length > 1 && r.low.indexOf(ts.join(' ')) > -1) total += 12;
+      total *= r.w;
+      if (hits === ts.length) all.push({ r:r, s:total }); else if (hits) any.push({ r:r, s:total * hits / ts.length });
+    });
+    var out = all.length ? all : any;
+    out.sort(function(a,b){ return b.s - a.s; });
+    return out.slice(0, 40).map(function(x){ return x.r; });
+  }
+  function highlight(text, ts){
+    var h = esc(text);
+    ts.filter(function(t){ return t.length > 1; }).forEach(function(t){
+      var re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\\/]/g,'\\$&') + ')','gi');
+      h = h.replace(re, '<mark>$1</mark>');
+    });
+    return h;
+  }
+  function snippet(body, ts, len){
+    len = len || 260;
+    var low = body.toLowerCase(), at = -1;
+    ts.forEach(function(t){ var i = low.indexOf(t); if (i > -1 && (at < 0 || i < at)) at = i; });
+    var start = Math.max(0, at - 80);
+    var s = body.slice(start, start + len);
+    return (start > 0 ? '&hellip; ' : '') + highlight(s, ts) + (start + len < body.length ? ' &hellip;' : '');
+  }
+
+  var qEl = $('q'), resEl = $('results'), home = $('home'), cnt = $('count'), clr = $('clear');
+  var lastTerms = [];
+  function run(q, push){
+    q = q || '';
+    clr.style.display = q ? 'block' : 'none';
+    if (!q.trim()){ resEl.innerHTML = ''; home.style.display = ''; cnt.textContent = ''; if (push) setHash(''); return; }
+    home.style.display = 'none';
+    var ts = terms(q); lastTerms = ts;
+    var rs = search(q);
+    cnt.textContent = rs.length ? rs.length + (rs.length === 1 ? ' result' : ' results') : '';
+    if (!rs.length){ resEl.innerHTML = '<div class="none">Nothing found for &ldquo;' + esc(q) + '&rdquo;. Try a single word, like a name, a material or a slide title.</div>'; }
+    else resEl.innerHTML = rs.map(function(r){
+      var c = r.c, img = c.images && c.images[0];
+      return '<button class="res" data-i="' + r.i + '"><div style="flex:1;min-width:0">' +
+        '<p class="meta">' + esc(docLabel(c.doc)) + (c.section && c.section !== c.title ? ' &middot; ' + esc(c.section) : '') + '</p>' +
+        '<h3>' + highlight(c.title || '', ts) + '</h3><p>' + snippet(r.body, ts) + '</p></div>' +
+        (img ? '<div class="thumb"><img loading="lazy" src="' + thumb(img) + '" alt=""></div>' : '') + '</button>';
+    }).join('');
+    if (push) setHash('q=' + encodeURIComponent(q));
+  }
+  var timer;
+  qEl.addEventListener('input', function(){ clearTimeout(timer); timer = setTimeout(function(){ run(qEl.value, true); }, 120); });
+  clr.addEventListener('click', function(){ qEl.value = ''; run('', true); qEl.focus(); });
+  resEl.addEventListener('click', function(e){
+    var b = e.target.closest('.res'); if (!b) return;
+    openChunk(+b.getAttribute('data-i'));
+  });
+
+  ['lantern','Fine Art Lamps','footcandles','suite','variances','tile','flooring','beam','wall color','north elevation','Richard'].forEach(function(t){
+    var b = document.createElement('button'); b.className = 'chip'; b.textContent = t;
+    b.onclick = function(){ qEl.value = t; run(t, true); };
+    $('chips').appendChild(b);
+  });
+
+  // ---------- reader ----------
+  var reader = $('reader'), rbody = $('rbody');
+  function render(md){ return marked.parse(fixImgs(md)); }
+  function openChunk(i){
+    var c = D.chunks[i];
+    var imgs = (c.images || []).filter(function(p){ return p.indexOf('arcom-presentation') > -1; });
+    var text = c.text;
+    rbody.innerHTML = '<p class="meta">' + esc(docLabel(c.doc)) + (docDate(c.doc) ? ' &middot; ' + docDate(c.doc) : '') + '</p>' +
+      '<div class="imgs">' + imgs.map(function(p){ return '<img src="' + p + '" alt="">'; }).join('') + '</div>' +
+      (c.section && c.section !== c.title ? '<h2 class="serif" style="font-weight:600;margin:0 0 8px">' + esc(c.section) + '</h2>' : '') +
+      '<div class="md">' + render(text) + '</div>' +
+      '<div class="btnrow"><button class="btn" data-doc="' + c.doc + '">Open full document</button>' +
+      '<a class="btn" href="https://github.com/svetlanawunnenberg/125worth/blob/main/' + docs[c.doc].file + '" target="_blank" rel="noopener">View on GitHub</a></div>';
+    markIn(lastTerms);
+    show(); setHash('p=' + i);
+  }
+  function openDoc(id){
+    var d = docs[id]; if (!d) return;
+    rbody.innerHTML = '<p class="meta">' + (docDate(id) || 'Reference') + '</p><div class="md">' + render(d.md) + '</div>' +
+      '<div class="btnrow"><a class="btn" href="https://github.com/svetlanawunnenberg/125worth/blob/main/' + d.file + '" target="_blank" rel="noopener">View on GitHub</a></div>';
+    show(); setHash('doc=' + id);
+  }
+  function openSlide(n){
+    var p = 'pages/arcom-presentation/slide-' + (n < 10 ? '0' : '') + n + '.jpg';
+    var hit = D.chunks.map(function(c,i){ return [c,i]; }).filter(function(x){ return (x[0].images||[]).indexOf(p) > -1; })[0];
+    if (hit) openChunk(hit[1]); else lightbox(p);
+  }
+  function markIn(ts){
+    if (!ts || !ts.length) return;
+    var walker = document.createTreeWalker(rbody.querySelector('.md'), NodeFilter.SHOW_TEXT), nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(function(n){
+      var h = highlight(n.nodeValue, ts);
+      if (h !== esc(n.nodeValue)){ var s = document.createElement('span'); s.innerHTML = h; n.parentNode.replaceChild(s, n); }
+    });
+  }
+  function show(){ reader.classList.add('on'); reader.scrollTop = 0; document.body.style.overflow = 'hidden'; }
+  function hide(){ reader.classList.remove('on'); document.body.style.overflow = ''; setHash(qEl.value ? 'q=' + encodeURIComponent(qEl.value) : ''); }
+  $('rclose').onclick = hide;
+  reader.addEventListener('click', function(e){
+    if (e.target === reader) return hide();
+    var d = e.target.closest('[data-doc]'); if (d) return openDoc(d.getAttribute('data-doc'));
+    if (e.target.tagName === 'IMG') lightbox(e.target.getAttribute('src'));
+  });
+
+  // ---------- lightbox ----------
+  var lb = $('lb');
+  function lightbox(src){ $('lbimg').src = src.replace('/thumbs/','/'); lb.classList.add('on'); }
+  $('lbclose').onclick = function(){ lb.classList.remove('on'); };
+  lb.addEventListener('click', function(e){ if (e.target === lb) lb.classList.remove('on'); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){ if (lb.classList.contains('on')) lb.classList.remove('on'); else if (reader.classList.contains('on')) hide(); }
+    if (e.key === '/' && document.activeElement !== qEl){ e.preventDefault(); qEl.focus(); }
+  });
+
+  // ---------- home ----------
+  var DOCDESC = {
+    '00_INDEX':'Project facts, people, timeline, key decisions',
+    '2026-11-17_arcom-presentation':'All 31 slides: plans, elevations, suites, variances, materials',
+    '2026-11-18_lantern-options-round-2':'Lighting emails, four lantern spec sheets, comparison'
+  };
+  $('docs').innerHTML = D.docs.map(function(d){
+    return '<button class="doc" data-open="' + d.id + '"><span class="t">' + esc(docLabel(d.id)) + '</span><span class="s">' +
+      (docDate(d.id) ? docDate(d.id) + ' &middot; ' : '') + esc(DOCDESC[d.id] || '') + '</span></button>';
+  }).join('');
+  $('docs').addEventListener('click', function(e){ var b = e.target.closest('[data-open]'); if (b) openDoc(b.getAttribute('data-open')); });
+
+  var lan = [];
+  D.chunks.forEach(function(c, i){ (c.images||[]).forEach(function(p){ if (p.indexOf('pages/lanterns/') === 0) lan.push([p, c.title, i]); }); });
+  $('lanterns').innerHTML = lan.map(function(x){
+    return '<button class="tile tall" data-i="' + x[2] + '"><img loading="lazy" src="' + x[0] + '" alt=""><span>' + esc(x[1].replace(/^\d+\.\s*/,'')) + '</span></button>';
+  }).join('');
+  $('lanterns').addEventListener('click', function(e){ var b = e.target.closest('[data-i]'); if (b) openChunk(+b.getAttribute('data-i')); });
+
+  var stitle = {};
+  D.chunks.forEach(function(c){ (c.images||[]).forEach(function(p){ var m = p.match(/slide-(\d+)/); if (m && !stitle[+m[1]]) stitle[+m[1]] = c.title; }); });
+  $('slides').innerHTML = D.slides.map(function(s){
+    var n = +s.match(/(\d+)/)[1];
+    return '<button class="tile" data-s="' + n + '"><img loading="lazy" src="pages/arcom-presentation/thumbs/' + s + '" alt=""><span>' + esc(stitle[n] || ('Slide ' + n)) + '</span></button>';
+  }).join('');
+  $('slides').addEventListener('click', function(e){ var b = e.target.closest('[data-s]'); if (b) openSlide(+b.getAttribute('data-s')); });
+
+  // ---------- shareable links ----------
+  function setHash(h){ history.replaceState(null, '', h ? '#' + h : location.pathname + location.search); }
+  function fromHash(){
+    var h = decodeURIComponent(location.hash.slice(1));
+    if (h.indexOf('q=') === 0){ qEl.value = h.slice(2); run(qEl.value, false); }
+    else if (h.indexOf('doc=') === 0) openDoc(h.slice(4));
+    else if (h.indexOf('p=') === 0) openChunk(+h.slice(2));
+  }
+  fromHash();
+})();
+</script>
+</body>
+</html>

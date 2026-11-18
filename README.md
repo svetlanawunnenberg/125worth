@@ -13,3 +13,14 @@ The `text/` files are also saved to the "125 Worth Ave" Project on claude.ai, so
 
 ## Adding new material
 Upload the file to a chat in the "125 Worth Ave" Project and say "add this to the 125 base."
+
+## Search site
+`index.html` is a public search page for everything in `text/`, served by GitHub Pages at
+https://svetlanawunnenberg.github.io/125worth/
+
+After adding or editing anything in `text/`, rebuild the search data with:
+
+    python3 scripts/build_search.py
+
+To show a picture with a passage, add a Markdown image line such as
+`![Spec sheet](../pages/lanterns/Example.jpg)` inside that section.
